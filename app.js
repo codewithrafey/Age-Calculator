@@ -20,6 +20,7 @@ function sub() {
   var minus = today - dob;
   var formula = minus / (1000 * 60 * 60 * 24 * 365);
   document.getElementById("res").innerHTML = "Result";
+  document.getElementById('output').style.color = 'black';
   document.getElementById("output").innerHTML =
     "Your age is " + Math.floor(formula) + " year";
 }
