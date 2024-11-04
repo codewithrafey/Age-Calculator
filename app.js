@@ -11,7 +11,7 @@ function sub() {
     document.getElementById("output").style.color = "red";
     document.getElementById("output").innerHTML =
       "Invalid date. Please select all fields.";
-    return; // Exit the function
+    return;
   }
 
   var dob = new Date(selectedYear, selectedMonth, selectedDate);
@@ -21,14 +21,14 @@ function sub() {
   var ageMonths = today.getMonth() - dob.getMonth();
   var ageDays = today.getDate() - dob.getDate();
 
-  if(ageDays < 0){
+  if (ageDays < 0) {
     ageMonths--;
-    ageDays += new Date(today.getFullYear() , today.getMonth() , 0).getDate()
+    ageDays += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
   }
-  if(ageMonths < 0){
+  if (ageMonths < 0) {
     ageYears--;
     ageMonths += 12;
- }
+  }
   document.getElementById("res").innerHTML = "Result";
   document.getElementById("output").style.color = "black";
   document.getElementById(
