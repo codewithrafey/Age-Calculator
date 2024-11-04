@@ -21,6 +21,14 @@ function sub() {
   var ageMonths = today.getMonth() - dob.getMonth();
   var ageDays = today.getDate() - dob.getDate();
 
+  if(ageDays < 0){
+    ageMonths--;
+    ageDays += new Date(today.getFullYear() , today.getMonth() , 0).getDate()
+  }
+  if(ageMonths < 0){
+    ageYears--;
+    ageMonths += 12;
+ }
   document.getElementById("res").innerHTML = "Result";
   document.getElementById("output").style.color = "black";
   document.getElementById(
