@@ -17,10 +17,13 @@ function sub() {
   var dob = new Date(selectedYear, selectedMonth, selectedDate);
   var today = new Date();
 
-  var minus = today - dob;
-  var formula = minus / (1000 * 60 * 60 * 24 * 365);
+  var ageYears = today.getFullYear() - dob.getFullYear();
+  var ageMonths = today.getMonth() - dob.getMonth();
+  var ageDays = today.getDate() - dob.getDate();
+
   document.getElementById("res").innerHTML = "Result";
-  document.getElementById('output').style.color = 'black';
-  document.getElementById("output").innerHTML =
-    "Your age is " + Math.floor(formula) + " year";
+  document.getElementById("output").style.color = "black";
+  document.getElementById(
+    "output"
+  ).innerHTML = `Your are ${ageYears} years, ${ageMonths} months, and ${ageDays} days old.`;
 }

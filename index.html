@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Age calculator</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    />
-  </head>
-  <style>
-    @media only screen and (max-width: 576px) {
-      .abc {
-        margin: 5px;
-      }
-      .design {
-        margin-top: -30px;
-      }
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+<style>
+  @media only screen and (max-width: 576px) {
+    .abc {
+      margin: 5px;
+
     }
+
     .design {
-      font-family: fantasy;
-      color: black;
+      margin-top: -30px;
     }
-  </style>
-  <body>
+
+    .set-height {
+      min-height: 95vh;
+    }
+  }
+
+  .design {
+    font-family: fantasy;
+    color: black;
+  }
+
+  .set-height {
+    height: 85vh;
+  }
+</style>
+
+<body>
+  <header class="set-height">
     <div class="container my-3 m-auto">
       <h1 class="design py-4">Age Calculator</h1>
       <p>Date of Birth <span class="text-danger">*</span> (d/m/y)</p>
       <div class="row">
-        <div class="abc col-md-2 my-xs-2">
+        <div class="abc col-md-2 col-sm-3 col-md-3 ">
           <label for="autoSizingSelect">Day</label>
           <select class="form-select" id="dateSelect">
             <option id="mySelect" selected>Choose...</option>
@@ -65,25 +76,25 @@
             <option value="31">31</option>
           </select>
         </div>
-        <div class="abc col-md-2">
+        <div class="abc col-md-2 col-sm-3 col-md-3">
           <label for="autoSizingSelect">Month</label>
           <select class="form-select" id="monthSelect">
             <option id="mySelect" selected>Choose...</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
+            <option value="0">1</option>
+            <option value="1">2</option>
+            <option value="2">3</option>
             <option value="3">4</option>
-            <option value="3">5</option>
-            <option value="3">6</option>
-            <option value="3">7</option>
-            <option value="3">8</option>
-            <option value="3">9</option>
-            <option value="3">10</option>
-            <option value="3">11</option>
-            <option value="3">12</option>
+            <option value="4">5</option>
+            <option value="5">6</option>
+            <option value="6">7</option>
+            <option value="7">8</option>
+            <option value="8">9</option>
+            <option value="9">10</option>
+            <option value="10">11</option>
+            <option value="11">12</option>
           </select>
         </div>
-        <div class="abc col-md-2">
+        <div class="abc col-md-2 col-sm-3 col-md-3">
           <label for="autoSizingSelect">Year</label>
           <select class="form-select" id="yearSelect">
             <option selected>Choose...</option>
@@ -115,20 +126,32 @@
           </select>
         </div>
       </div>
-      <br />
-      <button
-        class="btn btn-dark col-md-2 col-sm-2 col-lg-1 col-12"
-        onclick="sub()"
-      >
-        submit
-      </button>
-      <br />
-      <br />
-      <h1 class="design py-4" id="res"></h1>
-      <h4 id="output"></h4>
-    </div>
+      <br>
+      <button class="btn btn-dark col-md-2 col-sm-3  col-lg-2 col-12" onclick="sub()">Calculate</button>
 
-    <script src="app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+      <br><br>
+      <div>
+        <h1 class="design py-4" id="res"></h1>
+        <h4 id="output"></h4>
+      </div>
+    </div>
+  </header>
+
+
+
+
+
+
+  <footer>
+    <div class="container footer m-auto text-center">
+      <p>This website is made with ♥ by <span class="text-primary">Raffey</span class="text-primary"> </p>
+    </div>
+  </footer>
+
+
+
+  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
