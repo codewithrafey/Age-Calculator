@@ -33,5 +33,5 @@ function sub() {
   document.getElementById("output").style.color = "black";
   document.getElementById(
     "output"
-  ).innerHTML = `Your are ${ageYears} years, ${ageMonths} months, and ${ageDays} days old.`;
+  ).innerHTML = `You are ${ageYears} years, ${ageMonths} months, and ${ageDays} days old.`;
 }
