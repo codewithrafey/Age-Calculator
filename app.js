@@ -29,6 +29,15 @@ function sub() {
     ageYears--;
     ageMonths += 12;
   }
+  if(dob > today){
+    document.getElementById("res").innerHTML = "Result";
+    document.getElementById("output").style.color = "red";
+    document.getElementById("output").innerHTML =
+      "Date of birth needs to be earlier than the age at date.";
+    return;
+
+  }
+
   document.getElementById("res").innerHTML = "Result";
   document.getElementById("output").style.color = "black";
   document.getElementById(
